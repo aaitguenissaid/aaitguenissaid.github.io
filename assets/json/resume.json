@@ -1,74 +1,153 @@
 {
   "basics": {
-    "name": "Albert Einstein",
-    "label": "Scientist",
+    "name": "Abderrahmane Ait gueni ssaid",
+    "label": "Computer science student",
     "image": "",
-    "email": "albert@einstein.de",
-    "phone": "(912) 123-4567",
-    "url": "https://alshedivat.github.io/al-folio/",
-    "summary": "A German-born theoretical physicist, widely ranked among the greatest and most influential scientists of all time",
+    "email": "aaitguenissaid@gmail.com",
+    "phone": "+33 7 54 13 65 89",
+    "url": "https://aaitguenissaid.github.io/",
+    "summary": "Aspiring computer science student eager to embark on a research internship journey in machine learning and deep learning.",
     "location": {
-      "address": "2712 Broadway St",
-      "postalCode": "CA 94115",
-      "city": "San Francisco",
-      "countryCode": "US",
-      "region": "California"
+      //"address": "",
+      //"postalCode": "",
+      "city": "Grenoble",
+      "countryCode": "FR"
+      //"region": ""
     },
     "profiles": [
       {
-        "network": "Twitter",
-        "username": "AlbertEinstein",
-        "url": "https://twitter.com/AlbertEinstein"
+        "network": "LinkedIn",
+        "username": "aaitguenissaid",
+        "url": "https://www.linkedin.com/in/aaitguenissaid"
       }
     ]
   },
-  "work": [
+  "Work": [
     {
-      "name": "Institute for Advanced Study, Princeton University",
-      "position": "Professor of Theoretical Physics",
-      "url": "https://example.com",
-      "startDate": "1933-01-01",
-      "endDate": "1955-01-01",
-      "summary": "Teaching at Palmer Physical Laboratory (now 302 Frist Campus Center). While not a professor at Princeton, I associated with the physics professors and continued to give lectures on campus.",
+      "name": "Grenoble Informatics Laboratory",
+      "position": "Research Intern - Integrating information retrieval (IR) constraints in deep neural networks",
+      "url": "https://www.liglab.fr",
+      "startDate": "2023-05-15",
+      "endDate": "2022-07-31",
+      "Team" : "APTIKAL - Algorithms, Principles and TheorIes for collaborative Knowledge acquisition And Learning",
+      "Supervisor" : "Prof. Eric Gaussier",
+      "summary": "Worked on the reformulation of IR axioms into the neural framework",
       "highlights": [
-        "Relativity"
+        "Information retrieval", "IR Axioms", "Generalization of deep neural networks"
+      ]
+    },
+    {
+      "name": "Grenoble Institute of Neurosciences",
+      "position": "Research Intern - Integration of multi-parametric data by machine learning for the development of an imaging biomarker in epilepsy",
+      "url": "https://neurosciences.univ-grenoble-alpes.fr",
+      "startDate": "2022-02-01",
+      "endDate": "2022-08-31",
+      "Team" : "Functional Neuroimaging and Brain Perfusion",
+      "Supervisor" : "Dr. Emmanuel Barbier",
+      "summary": "one day a week from 01/02/2022 to 15/05/2022 then full time.",
+      "highlights": [
+        "Image processing", "Gaussian Mixture Models", "Clustering","Unsupervised Learning"
+      ]
+    },
+    {
+      "name": "Grenoble Informatics Laboratory",
+      "position": "Research Intern - Data Augmentation with Generative Adversarial Networks (GANs) for Semi-supervised Learning",
+      "url": "https://www.liglab.fr",
+      "startDate": "2021-06-07",
+      "endDate": "2021-07-16",
+      "Team" : "APTIKAL - Algorithms, Principles and TheorIes for collaborative Knowledge acquisition And Learning",
+      "Supervisor" : "Prof. Massih Reza-amini",
+      "summary": "Work on a new semi-supervised model for the prediction of phase and Euler angles in microscopic data.",
+      "highlights": [
+        "Generative Adversarial Networks (GANs)", "Data augmentation", "Semi-supervised Learning"
       ]
     }
   ],
   "volunteer": [],
   "education": [
     {
-      "institution": "University of Zurich, Zurich, Switzerland",
+      "institution": "Université Grenoble Alpes, Grenoble, France",
       "url": "https://www.uzh.ch/",
       "area": "Software Development",
-      "studyType": "PhD",
-      "startDate": "1905-01-01",
-      "endDate": "1905-01-01",
+      "studyType": "Master 2",
+      "startDate": "2023-09-01",
+      "endDate": "2024-08-31",
+      "score": "",
+      "courses": []
+    },
+    {
+      "institution": "Université Grenoble Alpes, Grenoble, France",
+      "url": "https://www.univ-grenoble-alpes.fr/",
+      "area": "master of computer science",
+      "studyType": "Master 1",
+      "startDate": "2022-09-01",
+      "endDate": "2023-08-31",
       "score": "",
       "courses": [
-        "Theory of Relativity"
+        "Programming Languages and Compiler Design",
+        "Operating systems design and concurrent programming",
+        "Introduction to AI and Data Science",
+        "Software engineering",
+        "Object-oriented design",
+        "Databases",
+        "Introduction to Networks",
+        "Introduction to Human-Computer Interaction and event-based programming",
+        "Automatic planning and AI techniques",
+        "Introduction to distributed systems",
+        "Parallel Algorithms and Programming",
+        "Operations Research",
+        "Introduction to mobile robotics",
+        "Image processing",
+        "Introduction to Cybersecurity"
       ]
-    }
-  ],
-  "awards": [
+    },
     {
-      "title": "Nobel Prize in Physics",
-      "date": "1921-11-01",
-      "awarder": "Royal Swedish Academy of Sciences",
-      "summary": "The Nobel Prizes are five separate prizes that, according to Alfred Nobel's will of 1895, are awarded to 'those who, during the preceding year, have conferred the greatest benefit to humankind.'"
+      "institution": "Université Grenoble Alpes, Grenoble, France",
+      "url": "https://www.univ-grenoble-alpes.fr/",
+      "area": "master of computer science",
+      "studyType": "Master 1",
+      "startDate": "2021-09-01",
+      "endDate": "2022-08-31",
+      "courses": [
+        "Algorithms Analysis and Complexity",
+        "Programming and Project Studies",
+        "Software and Hardware Architectures",
+        "Databases Design and Management",
+        "Syntactic Analysis",
+        "Introduction to Systems and Networks",
+        "Computability theory and Turing machines",
+        "Software Programming and Project",
+        "Algorithms and Modeling",
+        "Introduction to Machine Learning",
+        "English"
+      ]
+
     }
   ],
+  "awards": [],
   "certificates": [],
   "publications": [],
-  "skills": [],
-  "languages": [
+  "skills": [
     {
-      "language": "German",
-      "fluency": "Native speaker"
-    },
+      "Java, Python, SQL, Shell, Linux, Git, Java RMI, RabbitMQ, Docker, LaTex, GDB, Valgrind, Google test, Jetbrains, OpenMP, Open MPI, TensorFlow, Pytorch, NumPy, SciKit-Learn, SciPy, Pandas, Keras, Matplotlib, OpenCV, BeautifulSoup"
+    }
+  ],
+  "languages": [
     {
       "language": "English",
       "fluency": "Fluent"
+    },
+    {
+      "language": "French",
+      "fluency": "Fluent - C1 TCF"
+    },
+    {
+      "language": "Arabic",
+      "fluency": "Native speaker"
+    },
+    {
+      "language": "Kabyle",
+      "fluency": "Native speaker"
     }
   ],
   "interests": [],
