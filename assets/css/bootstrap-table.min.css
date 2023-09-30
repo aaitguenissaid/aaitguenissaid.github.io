@@ -1,0 +1,50 @@
+.bootstrap-table .fixed-table-container {
+    position: relative;
+    clear: both
+}
+
+.bootstrap-table .fixed-table-container .table {
+    width: 100%;
+    margin-bottom: 0 !important
+}
+
+.bootstrap-table .fixed-table-container .table th {
+    vertical-align: middle;
+    box-sizing: border-box
+}
+
+.bootstrap-table .fixed-table-container.fixed-height:not(.has-footer) {
+    border-bottom: 1px solid #dee2e6
+}
+
+.bootstrap-table .fixed-table-container .fixed-table-header {
+    overflow: hidden
+}
+
+.bootstrap-table .fixed-table-container .fixed-table-body {
+    overflow-x: auto;
+    overflow-y: auto;
+    height: 100%
+}
+
+.bootstrap-table .fixed-table-container .fixed-table-footer {
+    overflow: hidden
+}
+
+.bootstrap-table.bootstrap5 .float-right {
+    float: right
+}
+
+@keyframes loading {
+    0% {
+        opacity: 0
+    }
+
+    50% {
+        opacity: 1
+    }
+
+    100% {
+        opacity: 0
+    }
+}
