@@ -1,11 +1,11 @@
 ---
 layout: page
-permalink: /assets/pdf/Abderrahmane_CV.pdf
+permalink: /assets/pdf/CV.pdf
 title: Resume
 nav: true
 newtab: true
 nav_order: 4
-cv_pdf: Abderrahmane_CV.pdf
+cv_pdf: CV.pdf
 description: This is a description of the page. You can modify it in 'pages/_cv.md'. You can also change or remove the top pdf download button.
 toc:
   sidebar: left
