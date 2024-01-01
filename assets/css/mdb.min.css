@@ -3248,12 +3248,6 @@ h6 {
     display: block
 }
 
-.navbar .nav-item .nav-link .fab,
-.navbar .nav-item .nav-link .fas {
-    padding-right: 3px;
-    padding-left: 3px
-}
-
 @media (max-width:992px) {
     .navbar .nav-item .nav-link {
         padding-right: 6px;
