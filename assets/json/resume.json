@@ -8,11 +8,11 @@
     "url": "https://aaitguenissaid.github.io/",
     "summary": "Aspiring computer science student eager to embark on a research internship journey in machine learning and deep learning.",
     "location": {
-      //"address": "",
-      //"postalCode": "",
+      "address": "",
+      "postalCode": "",
       "city": "Grenoble",
-      "countryCode": "FR"
-      //"region": ""
+      "countryCode": "FR",
+      "region": ""
     },
     "profiles": [
       {
