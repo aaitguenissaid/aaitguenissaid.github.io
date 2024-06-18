@@ -140,24 +140,22 @@
   "certificates": [],
   "publications": [],
   "skills": [
-    {
-      "Java, Python, SQL, Shell, Linux, Git, Java RMI, RabbitMQ, Docker, LaTex, GDB, Valgrind, Google test, Jetbrains, OpenMP, Open MPI, TensorFlow, Pytorch, NumPy, SciKit-Learn, SciPy, Pandas, Keras, Matplotlib, OpenCV, BeautifulSoup"
-    }
+    "Java, Python, SQL, Shell, Linux, Git, Java RMI, RabbitMQ, Docker, LaTex, GDB, Valgrind, Google test, Jetbrains, OpenMP, Open MPI, TensorFlow, Pytorch, NumPy, SciKit-Learn, SciPy, Pandas, Keras, Matplotlib, OpenCV, BeautifulSoup"
   ],
   "languages": [
     {
       "language": "English",
-      "fluency": "Fluent"
+      "fluency": "Fluent",
       "icon":""
     },
     {
       "language": "French",
-      "fluency": "Fluent - C1 TCF"
+      "fluency": "Fluent - C1 TCF",
       "icon":""
     },
     {
       "language": "Arabic",
-      "fluency": "Native speaker"
+      "fluency": "Native speaker",
       "icon":""
     },
     {
