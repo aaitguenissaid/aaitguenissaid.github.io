@@ -2,7 +2,7 @@
 layout: about
 title: About
 permalink: /
-subtitle: <a href='#'>Computer Science Student</a>. Grenoble, France. #Contacts. Motto. Etc.
+subtitle: Computer Science Student. Grenoble, France. #Contacts. Motto. Etc.
 
 profile:
   align: right
