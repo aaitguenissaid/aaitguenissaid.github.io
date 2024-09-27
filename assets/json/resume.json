@@ -29,12 +29,10 @@
       "url": "https://www.liglab.fr",
       "startDate": "2023-05-15",
       "endDate": "2022-07-31",
-      "Team" : "APTIKAL - Algorithms, Principles and TheorIes for collaborative Knowledge acquisition And Learning",
-      "Supervisor" : "Prof. Eric Gaussier",
+      "Team": "APTIKAL - Algorithms, Principles and TheorIes for collaborative Knowledge acquisition And Learning",
+      "Supervisor": "Prof. Eric Gaussier",
       "summary": "Worked on the reformulation of IR axioms into the neural framework",
-      "highlights": [
-        "Information retrieval", "IR Axioms", "Generalization of deep neural networks"
-      ]
+      "highlights": ["Information retrieval", "IR Axioms", "Generalization of deep neural networks"]
     },
     {
       "name": "Grenoble Institute of Neurosciences",
@@ -42,12 +40,10 @@
       "url": "https://neurosciences.univ-grenoble-alpes.fr",
       "startDate": "2022-02-01",
       "endDate": "2022-08-31",
-      "Team" : "Functional Neuroimaging and Brain Perfusion",
-      "Supervisor" : "Dr. Emmanuel Barbier",
+      "Team": "Functional Neuroimaging and Brain Perfusion",
+      "Supervisor": "Dr. Emmanuel Barbier",
       "summary": "one day a week from 01/02/2022 to 15/05/2022 then full time.",
-      "highlights": [
-        "Image processing", "Gaussian Mixture Models", "Clustering","Unsupervised Learning"
-      ]
+      "highlights": ["Image processing", "Gaussian Mixture Models", "Clustering", "Unsupervised Learning"]
     },
     {
       "name": "Grenoble Informatics Laboratory",
@@ -55,12 +51,10 @@
       "url": "https://www.liglab.fr",
       "startDate": "2021-06-07",
       "endDate": "2021-07-16",
-      "Team" : "APTIKAL - Algorithms, Principles and TheorIes for collaborative Knowledge acquisition And Learning",
-      "Supervisor" : "Prof. Massih Reza-amini",
+      "Team": "APTIKAL - Algorithms, Principles and TheorIes for collaborative Knowledge acquisition And Learning",
+      "Supervisor": "Prof. Massih Reza-amini",
       "summary": "Work on a new semi-supervised model for the prediction of phase and Euler angles in microscopic data.",
-      "highlights": [
-        "Generative Adversarial Networks (GANs)", "Data augmentation", "Semi-supervised Learning"
-      ]
+      "highlights": ["Generative Adversarial Networks (GANs)", "Data augmentation", "Semi-supervised Learning"]
     }
   ],
   "volunteer": [
@@ -72,10 +66,9 @@
       "startDate": "2014-04-01",
       "endDate": "2015-07-01",
       "summary": "Lead organizer for the New York City branch of the People's Climate March, the largest climate march in history.",
-      "highlights": [
-        "Awarded 'Climate Hero' award by Greenpeace for my efforts organizing the march.","Men of the year 2014 by Time magazine"
-      ]
-    }],
+      "highlights": ["Awarded 'Climate Hero' award by Greenpeace for my efforts organizing the march.", "Men of the year 2014 by Time magazine"]
+    }
+  ],
   "education": [
     {
       "institution": "Université Grenoble Alpes, Grenoble, France",
@@ -146,17 +139,17 @@
     {
       "language": "English",
       "fluency": "Fluent",
-      "icon":""
+      "icon": ""
     },
     {
       "language": "French",
       "fluency": "Fluent - C1 TCF",
-      "icon":""
+      "icon": ""
     },
     {
       "language": "Arabic",
       "fluency": "Native speaker",
-      "icon":""
+      "icon": ""
     },
     {
       "language": "Kabyle",
@@ -168,7 +161,12 @@
       "name": "Physics",
       "icon": "fa-solid fa-tag",
       "keywords": [
-        "Quantum Mechanics","Quantum Computing","Quantum Information","Quantum Cryptography","Quantum Communication","Quantum Teleportation"
+        "Quantum Mechanics",
+        "Quantum Computing",
+        "Quantum Information",
+        "Quantum Cryptography",
+        "Quantum Communication",
+        "Quantum Teleportation"
       ]
     }
   ],
@@ -188,10 +186,7 @@
     {
       "name": "Quantum Computing",
       "summary": "Quantum computing is the use of quantum-mechanical phenomena such as superposition and entanglement to perform computation. Computers that perform quantum computations are known as quantum computers.",
-      "highlights": [
-        "Quantum Teleportation",
-        "Quantum Cryptography"
-      ],
+      "highlights": ["Quantum Teleportation", "Quantum Cryptography"],
       "startDate": "2018-01-01",
       "endDate": "2018-01-01",
       "url": "https://example.com"
