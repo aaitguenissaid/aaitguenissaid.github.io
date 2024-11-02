@@ -40,6 +40,9 @@
     window.op('init', {
       clientId: '{{ site.openpanel_analytics }}',
       trackScreenViews: true,
+      trackOutgoingLinks: true,
+      trackAttributes: true,
+    });
   </script>
   <script src="https://openpanel.dev/op1.js" defer async></script>
 {% endif %}
