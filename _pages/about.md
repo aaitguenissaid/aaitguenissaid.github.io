@@ -18,17 +18,22 @@ selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
-Hi, I am Abderrahmane Ait gueni ssaid, a passionate computer science student. Currently pursuing my second year of a Master's degree in Computer Science specialized in Data Science and Artificial Intelligence at Grenoble INP-Ensimag, I am dedicated to exploring the fascinating world of AI and its applications.
+Hi, I’m **Abderrahmane Ait Gueni Ssaid**, an ML research engineer with a Master’s degree in Computer Science specializing in Data Science and Artificial Intelligence from [Université Grenoble Alpes](https://www.univ-grenoble-alpes.fr/english/). I’m passionate about advancing AI through both practical and theoretical research and am currently seeking a PhD position in AI, ML or Deep Learning.
 
-My journey in the field of computer science began with a Bachelor's degree in Computer Science, and I have since gained valuable experience in various domains, including machine learning, deep learning, data analysis, and software engineering. During my academic journey, I've had the privilege of working on cutting-edge research projects, such as integrating information retrieval constraints into deep neural networks and developing imaging biomarkers for epilepsy using machine learning.
+My journey began with a Bachelor’s degree in Computer Science, and I have since completed four impactful internships that have shaped my expertise across AI and data science domains:
 
-In addition to my academic pursuits, I am proficient in a wide range of programming languages and technologies, including C/C++, Java, Python, and more. I am also well-versed in popular machine learning frameworks like TensorFlow and PyTorch.
+- At **Orange**, I worked on **evaluating factual knowledge in large language models (LLMs)**, a project that culminated in a paper now under review. This experience taught me the intricacies of model adaptability and interpretability.
 
-When I'm not coding or conducting research, you can find me exploring the latest developments in the tech world, experimenting with new programming languages.
+- At the **Grenoble Informatics Laboratory (LIG)**, I focused on **integrating information retrieval constraints into neural networks**, enhancing model efficiency. 
 
-In my spare time, I enjoy hiking, photography, and spending time with my family and friends.
+- In another project at LIG, I applied **GAN-based data augmentation for semi-supervised learning**, refining my skills in robust model development.
 
-I'm looking for a challenging and rewarding position in the field of data science or artificial intelligence. I'm confident that I have the skills and experience to be successful in this field.
+- At the **Grenoble Institute of Neurosciences (GIN)**, I developed **imaging biomarkers for epilepsy** using clustering techniques, where I gained experience handling complex, multi-modal medical data.
+
+I am proficient in Python, C/C++, Java, and various machine learning frameworks such as TensorFlow and PyTorch, making me well-equipped to tackle diverse challenges in AI and data science.
+
+Outside of work, I stay current with tech trends, and in my free time, I enjoy hiking, photography, and spending time with family and friends. I am excited to bring my skills and dedication to a role that pushes the boundaries of AI and contributes to meaningful advancements.
+
 
 <!--
 Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
