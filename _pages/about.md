@@ -26,7 +26,7 @@ My journey began with a Bachelor’s degree in Computer Science, and I have sinc
 
 - At the **Grenoble Informatics Laboratory (LIG)**, I focused on **integrating information retrieval constraints into neural networks**, enhancing model efficiency. 
 
-- In another project at LIG, I applied **GAN-based data augmentation for semi-supervised learning**, refining my skills in robust model development.
+- In another project at **LIG**, I applied **GAN-based data augmentation for semi-supervised learning**, refining my skills in robust model development.
 
 - At the **Grenoble Institute of Neurosciences (GIN)**, I developed **imaging biomarkers for epilepsy** using clustering techniques, where I gained experience handling complex, multi-modal medical data.
 
