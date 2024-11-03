@@ -24,7 +24,7 @@ My journey began with a Bachelor’s degree in Computer Science, and I have sinc
 
 - At **Orange**, I worked on **evaluating factual knowledge in large language models (LLMs)**, a project that culminated in a paper now under review. This experience taught me the intricacies of model adaptability and interpretability.
 
-- At the **Grenoble Informatics Laboratory (LIG)**, I focused on **integrating information retrieval constraints into neural networks**, enhancing model efficiency. 
+- At the **Grenoble Informatics Laboratory (LIG)**, I focused on **integrating information retrieval constraints into neural networks**, enhancing model efficiency.
 
 - In another project at **LIG**, I applied **GAN-based data augmentation for semi-supervised learning**, refining my skills in robust model development.
 
@@ -33,7 +33,6 @@ My journey began with a Bachelor’s degree in Computer Science, and I have sinc
 I am proficient in Python, C/C++, Java, and various machine learning frameworks such as TensorFlow and PyTorch, making me well-equipped to tackle diverse challenges in AI and data science.
 
 Outside of work, I stay current with tech trends, and in my free time, I enjoy hiking, photography, and spending time with family and friends. I am excited to bring my skills and dedication to a role that pushes the boundaries of AI and contributes to meaningful advancements.
-
 
 <!--
 Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
