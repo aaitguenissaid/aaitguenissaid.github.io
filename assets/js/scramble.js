@@ -24,7 +24,7 @@ function scrambledString(tag, objName, initScrambledString, initScrambledStringI
   this.rescramble();
   this.tag.innerHTML = this.string + ' <a href="#" onClick="' + this.objName + '.initAnimatedBubbleSort();return false;">unscramble</a>';
 }
-  
+
 function rescramble() {
   for (i = 0; i < this.indices.length; i++) {
     indexToMove = Math.floor(Math.random() * (this.indices.length - i));
@@ -50,16 +50,16 @@ function bubbleSortStep() {
     }
     if (this.indices[i] > this.indices[i + 1]) {
       this.changed = 1;
-	  tempIndex = this.indices[i];
-	  this.indices[i] = this.indices[i + 1];
-	  this.indices[i + 1] = tempIndex;
-	  tempArrange =
-	    this.string.substring(0, i) + this.string.substring(i + 1, i + 2) + this.string.substring(i, i + 1) + this.string.substring(i + 2);
-	  this.string = tempArrange;
-	  this.tag.innerHTML = this.string;
-	  this.bubbleSortBookmark = i;
-	  break;
-	}
+      tempIndex = this.indices[i];
+      this.indices[i] = this.indices[i + 1];
+      this.indices[i + 1] = tempIndex;
+      tempArrange =
+        this.string.substring(0, i) + this.string.substring(i + 1, i + 2) + this.string.substring(i, i + 1) + this.string.substring(i + 2);
+      this.string = tempArrange;
+      this.tag.innerHTML = this.string;
+      this.bubbleSortBookmark = i;
+      break;
+    }
   }
   this.bubbleSortBookmark = i;
   if (!this.changed) {
