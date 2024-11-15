@@ -5,7 +5,6 @@ emailScramble = new scrambledString(
   [16, 13, 4, 22, 5, 15, 14, 0, 1, 20, 3, 9, 21, 2, 8, 12, 10, 19, 11, 6, 23, 7, 18, 17]
 );
 
-
 // scramble.js
 //
 // 2011, Jeff Donahue (http://jeffdonahue.com/).
