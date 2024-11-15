@@ -2,7 +2,7 @@
 layout: about
 title: About
 permalink: /
-subtitle: Computer Science Student. Grenoble, France. #Contacts. Motto. Etc.
+subtitle: Machine Learning Research Engineer. #Contacts. Motto. Etc.
 
 profile:
   align: right
