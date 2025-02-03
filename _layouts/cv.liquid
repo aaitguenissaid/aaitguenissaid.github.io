@@ -4,6 +4,25 @@ layout: default
 {% unless site.data.resume %}
   <div class="post" style="margin: 0; padding: 0; width: 100%;">
     <header class="post-header" style="margin: 0; padding: 0;">
+      <h1 class="post-title">{{ page.title }}</h1>
+      {% if page.description %}
+        <p class="post-description">{{ page.description }}</p>
+      {% endif %}
+    </header>
+    <article style="margin: 0; padding: 0; width: 100%;">
+      <!-- PDF will be rendered into this container -->
+      <div id="pdf-container" style="width: 100%; overflow: hidden;"></div>
+    </article>
+  </div>
+{% else %}
+  <div class="post" style="margin: 0; padding: 0; width: 100%;">
+    <article style="margin: 0; padding: 0; width: 100%;">
+      <!-- PDF will be rendered into this container -->
+      <div id="pdf-container" style="width: 100%; overflow: hidden;"></div>
+    </article>
+  </div>
+{% endunless %}
+
 <!-- Include pdf.js library -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
 <script>
@@ -11,6 +30,9 @@ layout: default
     // URL of the PDF file processed by Jekyll
     const url = '{{ "/assets/pdf/CV.pdf" | relative_url }}';
     const container = document.getElementById('pdf-container');
+
+    // Configure pdf.js worker
+    const pdfjsLib = window['pdfjs-dist/build/pdf'];
     pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.worker.min.js';
 
     // Load the PDF document
