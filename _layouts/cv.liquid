@@ -1,127 +1,76 @@
 ---
 layout: default
 ---
+
 {% unless site.data.resume %}
-  <div class="post">
-    <header class="post-header">
-      <h1 class="post-title">
-        {{ page.title }}
-        {% if page.cv_pdf %}
-          <a
-            {% if page.cv_pdf contains '://' %}
-              href="{{ page.cv_pdf }}"
-            {% else %}
-              href="{{ page.cv_pdf | prepend: 'assets/pdf/' | relative_url }}"
-            {% endif %}
-            target="_blank"
-            rel="noopener noreferrer"
-            class="float-right"
-          >
-            <i class="fa-solid fa-file-pdf"></i>
-          </a>
-        {% endif %}
-      </h1>
+  <div class="post" style="margin: 0; padding: 0; width: 100%;">
+    <header class="post-header" style="margin: 0; padding: 0;">
+      <h1 class="post-title">{{ page.title }}</h1>
       {% if page.description %}
         <p class="post-description">{{ page.description }}</p>
       {% endif %}
     </header>
-
-    <article>
-      <div class="cv">
-        {% for entry in site.data.cv %}
-          <a class="anchor" id="{{ entry.title }}"></a>
-          <div class="card mt-3 p-3">
-            <h3 class="card-title font-weight-medium">{{ entry.title }}</h3>
-            <div>
-              {% if entry.type == 'list' %}
-                {% include cv/list.liquid %}
-              {% elsif entry.type == 'map' %}
-                {% include cv/map.liquid %}
-              {% elsif entry.type == 'nested_list' %}
-                {% include cv/nested_list.liquid %}
-              {% elsif entry.type == 'time_table' %}
-                {% include cv/time_table.liquid %}
-              {% elsif entry.type == 'list_groups' %}
-                {% include cv/list_groups.liquid %}
-              {% else %}
-                {{ entry.contents }}
-              {% endif %}
-            </div>
-          </div>
-        {% endfor %}
-      </div>
+    <article style="margin: 0; padding: 0; width: 100%;">
+      <!-- PDF will be rendered into this container -->
+      <div id="pdf-container" style="width: 100%; overflow: hidden;"></div>
     </article>
   </div>
 {% else %}
-  <div class="post">
-    <header class="post-header">
-      <h1 class="post-title">
-        {{ page.title }}
-        {% if page.cv_pdf %}
-          <a
-            {% if page.cv_pdf contains '://' %}
-              href="{{ page.cv_pdf }}"
-            {% else %}
-              href="{{ page.cv_pdf | prepend: 'assets/pdf/' | relative_url }}"
-            {% endif %}
-            target="_blank"
-            rel="noopener noreferrer"
-            class="float-right"
-          >
-            <i class="fa-solid fa-file-pdf"></i>
-          </a>
-        {% endif %}
-      </h1>
-      {% if page.description %}
-        <p class="post-description">{{ page.description }}</p>
-      {% endif %}
-    </header>
-
-    <article>
-      <div class="cv">
-        {% for data in site.data.resume %}
-          {% if site.jsonresume and site.jsonresume.size > 0 %}
-            {% unless site.jsonresume contains data[0] %}
-              {% continue %}
-            {% endunless %}
-          {% endif %}
-          {% if data[0] == 'meta' or data[1].size == 0 %} {% continue %} {% endif %}
-          <a class="anchor" id="{{ data[0] }}"></a>
-          <div class="card mt-3 p-3">
-            <h3 class="card-title font-weight-medium">{{ data[0] | capitalize }}</h3>
-            <div>
-              {% case data[0] %}
-                {% when 'basics' %}
-                  {% include resume/basics.liquid %}
-                {% when 'education' %}
-                  {% include resume/education.liquid %}
-                {% when 'work' %}
-                  {% include resume/work.liquid %}
-                {% when 'volunteer' %}
-                  {% include resume/volunteer.liquid %}
-                {% when 'projects' %}
-                  {% include resume/projects.liquid %}
-                {% when 'awards' %}
-                  {% include resume/awards.liquid %}
-                {% when 'skills' %}
-                  {% include resume/skills.liquid %}
-                {% when 'publications' %}
-                  {% include resume/publications.liquid %}
-                {% when 'languages' %}
-                  {% include resume/languages.liquid %}
-                {% when 'interests' %}
-                  {% include resume/interests.liquid %}
-                {% when 'certificates' %}
-                  {% include resume/certificates.liquid %}
-                {% when 'references' %}
-                  {% include resume/references.liquid %}
-                {% else %}
-
-              {% endcase %}
-            </div>
-          </div>
-        {% endfor %}
-      </div>
+  <div class="post" style="margin: 0; padding: 0; width: 100%;">
+    <article style="margin: 0; padding: 0; width: 100%;">
+      <!-- PDF will be rendered into this container -->
+      <div id="pdf-container" style="width: 100%; overflow: hidden;"></div>
     </article>
   </div>
 {% endunless %}
+
+<!-- Include pdf.js library -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    // URL of the PDF file processed by Jekyll
+    const url = '{{ "/assets/pdf/CV.pdf" | relative_url }}';
+    const container = document.getElementById('pdf-container');
+
+    // Configure pdf.js worker
+    const pdfjsLib = window['pdfjs-dist/build/pdf'];
+    pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.worker.min.js';
+
+    // Load the PDF document
+    pdfjsLib.getDocument(url).promise.then(pdf => {
+      console.log("PDF loaded with " + pdf.numPages + " pages.");
+      // Loop through each page
+      for (let pageNum = 1; pageNum <= pdf.numPages; pageNum++) {
+        pdf.getPage(pageNum).then(page => {
+          // Get the original viewport at scale=1
+          const unscaledViewport = page.getViewport({ scale: 1 });
+          // Calculate scale to match container's full width
+          const containerWidth = container.clientWidth;
+          const scale = containerWidth / unscaledViewport.width;
+          // Get a viewport at the calculated scale
+          const viewport = page.getViewport({ scale: scale });
+
+          // Create a canvas for this page
+          const canvas = document.createElement('canvas');
+          canvas.width = viewport.width;
+          canvas.height = viewport.height;
+          // Remove any internal scrolling by making each canvas block-level
+          canvas.style.display = 'block';
+          // Optionally, add spacing between pages
+          canvas.style.margin = '0 auto 20px auto';
+          container.appendChild(canvas);
+
+          // Render the page into the canvas context
+          const context = canvas.getContext('2d');
+          const renderContext = {
+            canvasContext: context,
+            viewport: viewport
+          };
+          page.render(renderContext);
+        });
+      }
+    }).catch(error => {
+      console.error("Error loading PDF:", error);
+    });
+  });
+</script>
