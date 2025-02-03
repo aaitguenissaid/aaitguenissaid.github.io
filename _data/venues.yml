@@ -1,9 +1,60 @@
-"AJP":
-  url: https://aapt.scitation.org/journal/ajp
-  color: "#00369f"
+# **Natural Language Processing (NLP)**
+"ACL":
+  url: https://www.aclweb.org/
+  color: "#800000"
 
-"PhysRev":
-  url: https://journals.aps.org/
+"EMNLP":
+  url: https://aclanthology.org/events/emnlp/
+  color: "#ff7f0e"
 
-"Vision":
-  color: "#009f36"
+"COLING_2025":
+  url: https://aclanthology.org/events/coling-2025/
+  color: "#b31b1b"
+
+# **Machine Learning & Artificial Intelligence (ML/AI)**
+"NeurIPS":
+  url: https://neurips.cc/
+  color: "#e64119"
+
+"ICLR":
+  url: https://iclr.cc/
+  color: "#003f5c"
+
+"ICML":
+  url: https://icml.cc/
+  color: "#1f77b4"
+
+"AAAI":
+  url: https://aaai.org/
+  color: "#228b22"
+
+"UAI":
+  url: https://www.auai.org/
+  color: "#bcbd22"
+
+"AISTATS":
+  url: https://www.aistats.org/
+  color: "#17becf"
+
+# **Computer Vision (CV)**
+"CVPR":
+  url: https://cvpr.thecvf.com/
+  color: "#2ca02c"
+
+"ECCV":
+  url: https://eccv.ecva.net/
+  color: "#9467bd"
+
+"ICCV":
+  url: https://iccv2023.thecvf.com/  # Update for the latest ICCV
+  color: "#d62728"
+
+# **Data Mining & Knowledge Discovery**
+"KDD":
+  url: https://www.kdd.org/
+  color: "#7f7f7f"
+
+# **Neural Networks & Computational Neuroscience**
+"ICANN":
+  url: https://e-nns.org/icann2024/
+  color: "#1a55a0"
