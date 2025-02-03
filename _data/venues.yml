@@ -46,7 +46,7 @@
   color: "#9467bd"
 
 "ICCV":
-  url: https://iccv2023.thecvf.com/  # Update for the latest ICCV
+  url: https://iccv2023.thecvf.com/
   color: "#d62728"
 
 # **Data Mining & Knowledge Discovery**

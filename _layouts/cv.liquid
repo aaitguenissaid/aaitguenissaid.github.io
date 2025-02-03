@@ -1,76 +1,56 @@
 ---
 layout: default
 ---
-
 {% unless site.data.resume %}
   <div class="post" style="margin: 0; padding: 0; width: 100%;">
     <header class="post-header" style="margin: 0; padding: 0;">
-      <h1 class="post-title">{{ page.title }}</h1>
-      {% if page.description %}
-        <p class="post-description">{{ page.description }}</p>
-      {% endif %}
-    </header>
-    <article style="margin: 0; padding: 0; width: 100%;">
-      <!-- PDF will be rendered into this container -->
-      <div id="pdf-container" style="width: 100%; overflow: hidden;"></div>
-    </article>
-  </div>
-{% else %}
-  <div class="post" style="margin: 0; padding: 0; width: 100%;">
-    <article style="margin: 0; padding: 0; width: 100%;">
-      <!-- PDF will be rendered into this container -->
-      <div id="pdf-container" style="width: 100%; overflow: hidden;"></div>
-    </article>
-  </div>
-{% endunless %}
-
 <!-- Include pdf.js library -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
 <script>
-  document.addEventListener("DOMContentLoaded", function() {
+  document.addEventListener('DOMContentLoaded', function () {
     // URL of the PDF file processed by Jekyll
     const url = '{{ "/assets/pdf/CV.pdf" | relative_url }}';
     const container = document.getElementById('pdf-container');
-
-    // Configure pdf.js worker
-    const pdfjsLib = window['pdfjs-dist/build/pdf'];
     pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.worker.min.js';
 
     // Load the PDF document
-    pdfjsLib.getDocument(url).promise.then(pdf => {
-      console.log("PDF loaded with " + pdf.numPages + " pages.");
-      // Loop through each page
-      for (let pageNum = 1; pageNum <= pdf.numPages; pageNum++) {
-        pdf.getPage(pageNum).then(page => {
-          // Get the original viewport at scale=1
-          const unscaledViewport = page.getViewport({ scale: 1 });
-          // Calculate scale to match container's full width
-          const containerWidth = container.clientWidth;
-          const scale = containerWidth / unscaledViewport.width;
-          // Get a viewport at the calculated scale
-          const viewport = page.getViewport({ scale: scale });
+    pdfjsLib
+      .getDocument(url)
+      .promise.then((pdf) => {
+        console.log('PDF loaded with ' + pdf.numPages + ' pages.');
+        // Loop through each page
+        for (let pageNum = 1; pageNum <= pdf.numPages; pageNum++) {
+          pdf.getPage(pageNum).then((page) => {
+            // Get the original viewport at scale=1
+            const unscaledViewport = page.getViewport({ scale: 1 });
+            // Calculate scale to match container's full width
+            const containerWidth = container.clientWidth;
+            const scale = containerWidth / unscaledViewport.width;
+            // Get a viewport at the calculated scale
+            const viewport = page.getViewport({ scale: scale });
 
-          // Create a canvas for this page
-          const canvas = document.createElement('canvas');
-          canvas.width = viewport.width;
-          canvas.height = viewport.height;
-          // Remove any internal scrolling by making each canvas block-level
-          canvas.style.display = 'block';
-          // Optionally, add spacing between pages
-          canvas.style.margin = '0 auto 20px auto';
-          container.appendChild(canvas);
+            // Create a canvas for this page
+            const canvas = document.createElement('canvas');
+            canvas.width = viewport.width;
+            canvas.height = viewport.height;
+            // Remove any internal scrolling by making each canvas block-level
+            canvas.style.display = 'block';
+            // Optionally, add spacing between pages
+            canvas.style.margin = '0 auto 20px auto';
+            container.appendChild(canvas);
 
-          // Render the page into the canvas context
-          const context = canvas.getContext('2d');
-          const renderContext = {
-            canvasContext: context,
-            viewport: viewport
-          };
-          page.render(renderContext);
-        });
-      }
-    }).catch(error => {
-      console.error("Error loading PDF:", error);
-    });
+            // Render the page into the canvas context
+            const context = canvas.getContext('2d');
+            const renderContext = {
+              canvasContext: context,
+              viewport: viewport,
+            };
+            page.render(renderContext);
+          });
+        }
+      })
+      .catch((error) => {
+        console.error('Error loading PDF:', error);
+      });
   });
 </script>
