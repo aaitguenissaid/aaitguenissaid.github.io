@@ -22,16 +22,13 @@ function scrambledString(tag, objName, initScrambledString, initScrambledStringI
   this.bubbleSortBookmark = 0;
 
   this.rescramble();
-  this.tag.innerHTML = this.string + ' <a href="#" onClick="' + this.objName + '.initAnimatedBubbleSort(); trackUnscrambleClick(); return false;">unscramble</a>';
+  this.tag.innerHTML =
+    this.string + ' <a href="#" onClick="' + this.objName + '.initAnimatedBubbleSort(); trackUnscrambleClick(); return false;">unscramble</a>';
 }
 
 function trackUnscrambleClick() {
-  console.log("Unscramble link clicked.");
   if (window.op) {
-    window.op('track', 'unscramble_clicked');
-    console.log("OpenPanel event tracked: unscramble_clicked");
-  } else {
-    console.log("OpenPanel is not loaded.");
+    window.op("track", "unscramble_clicked");
   }
 }
 
