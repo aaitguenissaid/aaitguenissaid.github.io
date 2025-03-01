@@ -25,7 +25,7 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-Hi, I’m **Abderrahmane Ait Gueni Ssaid**, an ML research engineer with a Master’s degree in Computer Science specializing in Data Science and Artificial Intelligence from [Université Grenoble Alpes](https://www.univ-grenoble-alpes.fr/english/). I’m passionate about advancing AI through both practical and theoretical research and am currently seeking a PhD position in AI, ML or Deep Learning.
+Hi, I’m **Abderrahmane Ait Gueni Ssaid**, an ML research engineer with a Master’s degree in Computer Science specializing in Data Science and Artificial Intelligence from [Université Grenoble Alpes](https://www.univ-grenoble-alpes.fr/english/). I’m passionate about advancing AI through both research and practical applications and am currently seeking opportunities in AI, Machine Learning, or Deep Learning, including PhD and engineering positions.
 
 My journey began with a Bachelor’s degree in Computer Science, and I have since completed four impactful internships that have shaped my expertise across AI and data science domains:
 
