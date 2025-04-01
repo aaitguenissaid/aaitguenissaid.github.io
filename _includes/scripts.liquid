@@ -255,6 +255,14 @@
   <script src="https://openpanel.dev/op1.js" defer async></script>
 {% endif %}
 
+{% if site.enable_umami_analytics %}
+  <script
+    defer
+    src="https://cloud.umami.is/script.js"
+    data-website-id="{{ site.umami_analytics }}"
+  ></script>
+{% endif %}
+
 {% if site.enable_progressbar %}
   <!-- Scrolling Progress Bar -->
   <script defer src="{{ '/assets/js/progress-bar.js' | relative_url | bust_file_cache }}" type="text/javascript"></script>
