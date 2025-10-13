@@ -1,16 +1,44 @@
 ---
 layout: default
 ---
-<div class="post" style="margin: 0; padding: 0; width: 100%;">
+
+<style>
+  /* Hide elements meant for JS by default */
+  .js-only {
+    display: none;
+  }
+</style>
+
+<!-- PDF content: hidden unless JS runs -->
+<div class="post js-only" style="margin: 0; padding: 0; width: 100%;">
   <article style="margin: 0; padding: 0; width: 100%;">
     <div id="pdf-container" style="width: 100%; overflow: hidden;">
-      <iframe id="pdf-iframe" src="{{ "/assets/pdf/CV.pdf" | relative_url }}" type="application/pdf" width="100%" style="border: none; overflow: hidden;" scrolling="no"></iframe>
+      <iframe
+        id="pdf-iframe"
+        src="{{ "/assets/pdf/CV.pdf" | relative_url }}"
+        type="application/pdf"
+        width="100%"
+        style="border: none; overflow: hidden;"
+        scrolling="no"
+      ></iframe>
     </div>
   </article>
 </div>
 
+<!-- Fallback for no-JS -->
+<noscript>
+  <div style="padding: 1em; background: #ffdddd; color: #900; font-weight: bold; text-align: center;">
+    ⚠️ JavaScript is disabled in your browser. Please enable it to view this PDF properly.
+  </div>
+</noscript>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
 <script>
+  // Show PDF content only when JS runs
+  document.querySelectorAll('.js-only').forEach(el => {
+    el.style.display = 'block';
+  });
+
   const url = '{{ "/assets/pdf/CV.pdf" | relative_url }}';
 
   const pdfjsLib = window['pdfjs-dist/build/pdf'];
@@ -20,21 +48,15 @@ layout: default
   loadingTask.promise.then(pdf => {
     const container = document.getElementById('pdf-container');
     const iframe = document.getElementById('pdf-iframe');
-    const aspectRatio = 1.393; // A4 aspect ratio (height/width)
-    const containerWidth = container.clientWidth; // Actual width of the PDF container
-    const pageHeight = containerWidth * aspectRatio; // Dynamic page height based on container width and aspect ratio
+    const aspectRatio = 1.42; // A4 aspect ratio (height/width)
+    const containerWidth = container.clientWidth;
+    const pageHeight = containerWidth * aspectRatio;
     const totalHeight = pageHeight * pdf.numPages;
 
-    console.log('Container width:', containerWidth);
-    console.log('Aspect ratio:', aspectRatio);
-    console.log('Page height:', pageHeight);
-    console.log('Number of pages:', pdf.numPages);
-    console.log('Total height:', totalHeight);
-
     iframe.style.height = `${totalHeight}px`;
-    iframe.style.width = '100%'; // Ensure the PDF is adjusted to the width of the container
-    iframe.style.transform = `scale(${containerWidth / iframe.clientWidth})`; // Scale to fit width
-    iframe.style.transformOrigin = 'top left'; // Ensure scaling starts from the top left corner
+    iframe.style.width = '100%';
+    iframe.style.transform = `scale(${containerWidth / iframe.clientWidth})`;
+    iframe.style.transformOrigin = 'top left';
     setupProgressBar();
   });
 
