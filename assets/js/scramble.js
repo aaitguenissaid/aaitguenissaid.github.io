@@ -16,14 +16,22 @@ function scrambledString(tag, objName, initScrambledString, initScrambledStringI
   this.string = initScrambledString;
   this.indices = initScrambledStringIndices;
   this.rescramble = rescramble;
-  this.rescramble = rescramble;
   this.initAnimatedBubbleSort = initAnimatedBubbleSort;
   this.bubbleSortStep = bubbleSortStep;
   this.bubbleSortBookmark = 0;
 
   this.rescramble();
-  this.tag.innerHTML =
-    this.string + ' <a href="#" onClick="' + this.objName + '.initAnimatedBubbleSort(); trackUnscrambleClick(); return false;">unscramble</a>';
+
+  this.tag.innerHTML = this.string + ' <a href="#" id="unscramble-link">unscramble</a>';
+  var self = this;
+  var link = this.tag.querySelector("#unscramble-link");
+  if (link) {
+    link.addEventListener("click", function (e) {
+      e.preventDefault();
+      self.initAnimatedBubbleSort();
+      trackUnscrambleClick();
+    });
+  }
 }
 
 function trackUnscrambleClick() {
@@ -33,42 +41,74 @@ function trackUnscrambleClick() {
 }
 
 function rescramble() {
+  var i, indexToMove, charIndexRemoved, scrambledStringTemp;
+
   for (i = 0; i < this.indices.length; i++) {
     indexToMove = Math.floor(Math.random() * (this.indices.length - i));
     charIndexRemoved = this.indices.splice(indexToMove, 1);
     this.indices = this.indices.concat(charIndexRemoved);
     scrambledStringTemp =
-      this.string.substring(0, indexToMove) + this.string.substring(indexToMove + 1) + this.string.substring(indexToMove, indexToMove + 1);
+      this.string.substring(0, indexToMove) +
+      this.string.substring(indexToMove + 1) +
+      this.string.substring(indexToMove, indexToMove + 1);
     this.string = scrambledStringTemp;
   }
 }
 
 function initAnimatedBubbleSort() {
-  this.interval = setInterval(this.objName + ".bubbleSortStep()", 12);
+  var self = this; // fix for CSP-safe setInterval
+  this.interval = setInterval(function () {
+    self.bubbleSortStep();
+  }, 12);
 }
 
 function bubbleSortStep() {
+  var i, tempIndex, tempArrange;
+
   if (this.bubbleSortBookmark >= this.indices.length - 1) {
     this.bubbleSortBookmark = 0;
   }
+
   for (i = this.bubbleSortBookmark; i < this.indices.length - 1; i++) {
     if (i == 0) {
       this.changed = 0;
     }
+
     if (this.indices[i] > this.indices[i + 1]) {
       this.changed = 1;
+
       tempIndex = this.indices[i];
       this.indices[i] = this.indices[i + 1];
       this.indices[i + 1] = tempIndex;
+
       tempArrange =
-        this.string.substring(0, i) + this.string.substring(i + 1, i + 2) + this.string.substring(i, i + 1) + this.string.substring(i + 2);
+        this.string.substring(0, i) +
+        this.string.substring(i + 1, i + 2) +
+        this.string.substring(i, i + 1) +
+        this.string.substring(i + 2);
+
       this.string = tempArrange;
-      this.tag.innerHTML = this.string;
+      this.tag.innerHTML =
+        this.string + ' <a href="#" id="unscramble-link">unscramble</a>';
+
+      // Reattach event listener after innerHTML reset
+      var self = this;
+      var link = this.tag.querySelector("#unscramble-link");
+      if (link) {
+        link.addEventListener("click", function (e) {
+          e.preventDefault();
+          self.initAnimatedBubbleSort();
+          trackUnscrambleClick();
+        });
+      }
+
       this.bubbleSortBookmark = i;
       break;
     }
   }
+
   this.bubbleSortBookmark = i;
+
   if (!this.changed) {
     clearInterval(this.interval);
   }
