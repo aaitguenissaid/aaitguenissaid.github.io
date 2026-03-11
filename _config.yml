@@ -5,7 +5,7 @@
 title: blank # the website title (if blank, full name will be used instead)
 first_name: Abderrahmane
 middle_name:
-last_name: Ait gueni ssaid
+last_name: Ait guenissaid
 contact_note: >
   Feel free to connect with me on LinkedIn or reach out via email.
 footer_text: >
@@ -264,7 +264,7 @@ display_categories: ["external-services"] # these categories will be displayed o
 # -----------------------------------------------------------------------------
 
 scholar:
-  last_name: [Ait gueni ssaid]
+  last_name: [Ait guenissaid]
   first_name: [Abderrahmane, A.]
 
   style: apa
