@@ -165,6 +165,11 @@
 <script defer src="{{ '/assets/js/common.js' | relative_url | bust_file_cache }}"></script>
 <script defer src="{{ '/assets/js/copy_code.js' | relative_url | bust_file_cache }}" type="text/javascript"></script>
 
+<!-- Scramble Script by Jeff Donahue -->
+{% if page.url == "/" %}
+  <script src="{{ '/assets/js/scramble.js' | relative_url }}"></script>
+{% endif %}
+
 <!-- Jupyter Open External Links New Tab -->
 <script defer src="{{ '/assets/js/jupyter_new_tab.js' | relative_url | bust_file_cache }}"></script>
 
@@ -262,6 +267,14 @@
     async
     defer
     src="https://openpanel.dev/op1.js"
+  ></script>
+{% endif %}
+
+{% if site.enable_umami_analytics %}
+  <script
+    defer
+    src="https://cloud.umami.is/script.js"
+    data-website-id="{{ site.umami_analytics }}"
   ></script>
 {% endif %}
 
