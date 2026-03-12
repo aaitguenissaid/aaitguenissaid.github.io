@@ -22,7 +22,7 @@ function scrambledString(tag, objName, initScrambledString, initScrambledStringI
 
   this.rescramble();
 
-  this.tag.innerHTML = this.string + ' <a href="#" id="unscramble-link">unscramble</a>';
+  this.tag.innerHTML = this.string + ' <a href="" id="unscramble-link">unscramble</a>';
   var self = this;
   var link = this.tag.querySelector("#unscramble-link");
   if (link) {
@@ -35,8 +35,8 @@ function scrambledString(tag, objName, initScrambledString, initScrambledStringI
 }
 
 function trackUnscrambleClick() {
-  if (window.op) {
-    window.op("track", "unscramble_clicked");
+  if (window.umami) {
+    window.umami.track("unscramble_clicked");
   }
 }
 
@@ -88,8 +88,7 @@ function bubbleSortStep() {
         this.string.substring(i + 2);
 
       this.string = tempArrange;
-      this.tag.innerHTML =
-        this.string + ' <a href="#" id="unscramble-link">unscramble</a>';
+      this.tag.innerHTML = this.string
 
       // Reattach event listener after innerHTML reset
       var self = this;
